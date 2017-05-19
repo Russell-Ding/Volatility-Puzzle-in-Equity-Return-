@@ -77,6 +77,7 @@ def extract_daily_signal(signal_list, signal_col, datestr, investable_name):
 
 def split_portfolio(signal_series, nyse_list):
     # from small to large sorted portfolio
+    # Intriduce NYSE stocks as thresholds to split the whole stock universe
     
     nyse_signal = signal_series[signal_series.index.isin(nyse_list)]
     
